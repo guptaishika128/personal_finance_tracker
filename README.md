@@ -24,6 +24,17 @@ The **Personal Finance Tracker** is a web-based application designed to help use
 3. **Delete Entries:**
    - Click the delete icon next to an entry to remove it from the list and update the summary.
 
+## LocalStorage API
+
+The application uses the [LocalStorage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to persist data across page reloads. LocalStorage allows us to store data in the user's browser in a key-value pair format.
+
+### How It Works
+
+- **Storing Data:**
+  Data is stored in LocalStorage using `localStorage.setItem(key, value)`. In this application, financial entries are saved as a JSON string. For example:
+  ```javascript
+  localStorage.setItem("tableEntries", JSON.stringify(tableEntries));
+
 ## Project Structure
 
 - **HTML:** Defines the structure of the application and includes the main elements such as the summary, input form, and table.
